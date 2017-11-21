@@ -29,35 +29,29 @@
       </div>
     </nav>
     <main role="main" class="container">
-      <div class="row">
-        <div class ="col-sm">
+      <div class="row" id="images">
+        <div class ="col-sm-4">
           <div class="card">
             <img class="card-img-top" src="/images/moon.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class ="col-sm">
-          <div class="card">
-            <img class="card-img-top" src="/images/moon.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-        </div>
-        <div class ="col-sm">
-          <div class="card">
-            <img class="card-img-top" src="/images/moon.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
           </div>
         </div>
       </div>
     </main>
+    <script type="text/javascript">
+    var imgDir = ['max', 'moon', 'ros', 'stanford'];
+    for(var i = 0; i < imgDir.length; i++) {
+      // Create elements
+      var col = document.createElement('div');
+      var card = document.createElement('div');
+      var img = document.createElement('img');
+      // Set attributes
+      col.className = 'col-sm-4';
+      card.className = 'card';
+      img.setAttribute('src', '/' + imgDir[i] + '.jpg');
+      card.appendChild(img);
+      col.appendChild(card);
+      document.getElementById('images').appendChild(col);
+    }
+    </script>
   </body>
 </html>
