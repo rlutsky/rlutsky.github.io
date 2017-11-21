@@ -30,11 +30,6 @@
     </nav>
     <main role="main" class="container">
       <div class="row" id="images">
-        <div class ="col-sm-4">
-          <div class="card">
-            <img class="card-img-top" src="/images/moon.jpg" alt="Card image cap">
-          </div>
-        </div>
       </div>
     </main>
     <script type="text/javascript">
@@ -47,7 +42,7 @@
       // Set attributes
       col.className = 'col-sm-4';
       card.className = 'card';
-      img.setAttribute('src', '/' + imgDir[i] + '.jpg');
+      img.setAttribute('src', '/images/' + imgDir[i] + '.jpg');
       card.appendChild(img);
       col.appendChild(card);
       document.getElementById('images').appendChild(col);
